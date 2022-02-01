@@ -25,8 +25,15 @@
 //
 // (╯°□°)╯︵ ┻━┻ *us symbolically flipping the nft space upside down*
 
+/**
+ *Submitted for verification at Etherscan.io on 2022-01-29
+*/
+
 // SPDX-License-Identifier: BSD-3-Clause
 // File: contracts/IBatch.sol
+
+
+
 pragma solidity ^0.8.0;
 
 interface IBatch {
@@ -332,6 +339,7 @@ interface IERC165 {
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)
 pragma solidity ^0.8.0;
 
+
 /**
  * @dev Implementation of the {IERC165} interface.
  *
@@ -499,7 +507,6 @@ interface IERC721 is IERC165 {
 // File: @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
 // OpenZeppelin Contracts v4.4.1 (token/ERC721/extensions/IERC721Enumerable.sol)
 pragma solidity ^0.8.0;
-
 
 /**
  * @title ERC-721 Non-Fungible Token Standard, optional enumeration extension
@@ -679,6 +686,7 @@ abstract contract ERC721B is Context, ERC165, IERC721, IERC721Metadata {
         _safeTransfer(from, to, tokenId, _data);
     }
 
+
     //internal
     function _safeTransfer(
         address from,
@@ -789,8 +797,8 @@ abstract contract ERC721B is Context, ERC165, IERC721, IERC721Metadata {
         uint256 tokenId
     ) internal virtual {}
 }
-
 // File: contracts/ERC721EnumerableLite.sol
+
 pragma solidity ^0.8.0;
 
 /****************************************
@@ -856,7 +864,9 @@ abstract contract ERC721EnumerableLite is ERC721B, IBatch, IERC721Enumerable {
 
 // File: @openzeppelin/contracts/utils/Context.sol
 // OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
+
 pragma solidity ^0.8.0;
+
 
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -1028,16 +1038,16 @@ library Strings {
     }
 }
 
-//File: LeLenny Smart Contract
+//lelenny smart contract
 pragma solidity ^0.8.2;
 
-contract LeLenny is ERC721EnumerableLite, Delegated {
+contract lelennytest is ERC721EnumerableLite, Delegated {
     using Strings for uint256;
 
     uint256 public PRICE = 0.0069 ether;
     uint256 private MAX_TOKENS_PER_TRANSACTION = 9;
     uint256 private MAX_SUPPLY = 3333;
-    uint256 private freeLimit = 999;
+    uint256 private freeLimit = 3;
     bool public revealed = false;
 
     string private notRevealedUri = "ipfs://QmbDB5VKcEydgT6MhcQkAoPcFV967sZBWMFEqwEMgWMmGD/lelennyloader.json";
@@ -1047,7 +1057,7 @@ contract LeLenny is ERC721EnumerableLite, Delegated {
 
     address art = 0x382A6216c35fEf447cdE1f6e4AF07652dfF3d243;
 
-    constructor() ERC721B("LeLenny", "LENNY") {
+    constructor() ERC721B("lelennytest", "LENNY") {
     }
 
     function reveal() public onlyDelegates {
