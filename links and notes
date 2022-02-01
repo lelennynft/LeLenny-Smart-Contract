@@ -1,0 +1,9 @@
+TESTNET ETHERSCAN: https://rinkeby.etherscan.io/address/0xeedcb3e2129403aedec31203856ead47e67a0380
+
+OPENSEA: https://testnets.opensea.io/collection/lelennytest
+
+//So Ive compiled the contract on remix and uploaded it to testnet succesfully. It appears that everything goes well when I mint from the contract on remix and on 
+etherscan. The transactions succeed and the nfts appear in my wallet. When I go to opensea though, it appears as if one nft per transaction is being withheld from 
+showing on opensea (if i mint 4 nfts only 3 show up, if i mint 1 nft none show up.)They do however show up on the activity tab of the account that minted them so 
+Im just super confused as to where the error is. If i had to guess its somewhere in the ERC721B, ERC721Enumerablelite, or the smart contract. (I know very little 
+so take that guess with a grain of salf.)
